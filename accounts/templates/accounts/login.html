@@ -1,0 +1,20 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-4 offset-4">
+            <h1 class="text-center text-white">Login</h1>
+            <form action="" method="POST">{% csrf_token %}
+                <div class="form-group">
+                    <label for="id_username" class="text-white">User name</label>
+                    <input type="text" class="form-control" name="username" autofocus="" placeholder="User name" required="" id="id_username"></p>
+                </div>
+                <div class="form-group">
+                    <label for="id_password" class="text-white">Password</label>
+                    <input type="password" class="form-control" name="password" placeholder="password" required="" id="id_password">
+                </div>
+                <button class="btn btn-primary" type="submit">login</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

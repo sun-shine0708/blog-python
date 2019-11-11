@@ -1,0 +1,36 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<h2 class="user-name text-white m-2">@{{ user.username }}</h2>
+
+<div class="container">
+    <div class="row">
+        {% for post in posts %}
+        <div class="col-4 mt-3">
+            <div class="card">
+            {% if post.image %}
+                <img src="{{ post.image.url }}" class="card-img-top px-2 pt-2">
+            {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h5>
+                    <p class="card-text">{{ post.text }}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">{{ post.published_date }}</small>
+                    <div class="d-flex float-right">
+                        <form action="{% url 'post_edit' pk=post.pk %}">{% csrf_token %}
+                            <button class="btn btn-primary" type="submit">edit</button>
+                        </form>
+                        <form method="post" action="{% url 'post_delete' pk=post.pk %}">{% csrf_token %}
+                            <button class="btn btn-primary ml-2" type="submit" onclick='return confirm("本当に削除しますか？");'>delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

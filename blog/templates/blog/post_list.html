@@ -1,0 +1,38 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<div class="dropdown m-2">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Category
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    {% for c in category %}
+        <div class="dropdown-item" value="{{ c.id }}" id= "{{c.id}}" >{{ c.title }}</div>
+    {% endfor %}
+    </div>
+</div>
+
+<div class="row m-1">
+	<div class="col-6 offset-3">
+		<form class="form-inline">
+		<i id="search-icon" class="fas fa-search text-white" aria-hidden="true"></i>
+		<input id="user-input" class="form-control form-control-sm ml-3" type="text" placeholder="Search" aria-label="Search">
+		</form>
+	</div>
+</div>
+
+<div id="replaceable-content">
+    {% include 'blog/category_list.html' %}
+</div>
+
+{% endblock %}
+
+
+{% comment %} <aside>
+    <h2>Category</h2>
+    {% render_category_links %}
+</aside> {% endcomment %}
+
+{% comment %} {% load blog_tags %}
+<!DOCTYPE html> {% endcomment %}
