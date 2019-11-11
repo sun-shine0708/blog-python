@@ -1,1 +1,1 @@
-web: gunicorn myproject.wsgi
+web: gunicorn afternoon-bayou-26703.wsgi --log-file -
