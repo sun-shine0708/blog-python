@@ -1,1 +1,1 @@
-web: gunicorn blog-python.wsgi
+web: gunicorn afternoon-bayou-26703.wsgi
