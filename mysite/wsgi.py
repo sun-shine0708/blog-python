@@ -24,7 +24,7 @@ def awake():
     while True:
         try:
             print("Start Awaking")
-            requests.get("http://hogefuga.herokuapp.com/")
+            requests.get("https://afternoon-bayou-26703.herokuapp.com/")
             print("End")
         except:
             print("error")
