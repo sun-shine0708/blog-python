@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'blog',
     'accounts.apps.AccountsConfig',
     'django_cleanup',
+    'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [
