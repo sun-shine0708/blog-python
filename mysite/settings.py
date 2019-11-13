@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'production-tweets',
+        'NAME': 'tweets',
         'USER': 'postgres',
         'PASSWORD': 'Yh0908friend',
         'HOST': '127.0.0.1',
@@ -146,3 +146,7 @@ if not DEBUG:
     SECRET_KEY = os.environ['SECRET_KEY']
     import django_heroku
     django_heroku.settings(locals())
+
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES['default'].update(db_from_env)
