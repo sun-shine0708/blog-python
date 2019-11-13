@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import environ
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -138,6 +137,10 @@ LOGOUT_REDIRECT_URL = 'post_list' # ログアウト後のリダイレクト先
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES['default'].update(db_from_env)
+
 try:
     from .local_settings import *
 except ImportError:
@@ -149,15 +152,10 @@ if not DEBUG:
     import django_heroku
     django_heroku.settings(locals())
 
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
-DATABASES['default'].update(db_from_env)
+    CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dagxbammc',
+    'API_KEY': '143933697464914',
+    'API_SECRET': 'pZ3mmy3LLcQ8Rba4hRz3MTtmFN8'
+    }
 
-env = environ.Env(DEBUG=(bool,False))
-env.read_env(os.path.join(BASE_DIR,'.env'))
-
-CLOUDINARY_STORAGE = env('CLOUDINARY_STORAGE')
-
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
