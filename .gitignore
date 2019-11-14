@@ -6,7 +6,7 @@ db.sqlite3
 /static
 .DS_Store
 staticfiles
-local_settings.py
+mysite/local_settings.py
 *.py[co]
 
 media/photos
