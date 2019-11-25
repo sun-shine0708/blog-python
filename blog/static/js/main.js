@@ -11,9 +11,9 @@ let scheduled_function = false
 let ajax_call = function (endpoint, request_parameters) {
 	$.getJSON(endpoint, request_parameters)
 		.done(response => {
-			posts_div.fadeTo('slow', 0).promise().then(() => {
+			posts_div.fadeTo(450, 0).promise().then(() => {
 				posts_div.html(response['html_from_view'])
-				posts_div.fadeTo('slow', 1)
+				posts_div.fadeTo(450, 1)
 				// search_icon.removeClass('blink')
 			})
 		})
