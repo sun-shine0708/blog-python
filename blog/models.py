@@ -4,10 +4,10 @@ from django.utils import timezone
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, db_index = True)
     text = models.TextField()
     image = models.ImageField(upload_to = 'photos', null = True, blank=True)
-    category = models.ForeignKey('Category', on_delete=models.PROTECT, null = True)
+    category = models.ForeignKey('Category', on_delete=models.PROTECT, null = True, db_index = True)
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(
