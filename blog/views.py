@@ -6,6 +6,7 @@ from .forms import PostForm
 from django.shortcuts import redirect
 from django.contrib import messages
 from django.views.decorators.http import require_POST
+from django.contrib.auth.decorators import login_required
 from django import template
 from django.http import JsonResponse
 from django.template.loader import render_to_string
@@ -72,7 +73,7 @@ def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post,'current_user':current_user})
 
-
+@login_required
 def post_new(request):
     if request.method == "POST":
         form = PostForm(request.POST,request.FILES)
