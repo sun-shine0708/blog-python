@@ -14,7 +14,7 @@ class MyLogoutView(LoginRequiredMixin, LogoutView):
     template_name = "accounts/logout.html"
 
 class IndexView(TemplateView):
-    template_name = "blog/templates/blog/base.html"
+    template_name = "blog/templates/blog/post_list.html"
 
 class UserCreateView(CreateView):
     form_class = UserCreationForm
