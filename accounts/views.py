@@ -11,7 +11,7 @@ class MyLoginView(LoginView):
     template_name = "accounts/login.html"
 
 class MyLogoutView(LoginRequiredMixin, LogoutView):
-    template_name = "accounts/logout.html"
+    template_name = "blog/templates/blog/post_list.html"
 
 class IndexView(TemplateView):
     template_name = "blog/templates/blog/post_list.html"
