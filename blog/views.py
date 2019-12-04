@@ -63,7 +63,6 @@ def post_list(request):
 #             context={"posts": posts}
 #         )
 #         data_dict = {"html_from_view": html}
-#         return JsonResponse(data=data_dict, safe=False)
 
 
 
