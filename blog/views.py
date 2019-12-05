@@ -62,7 +62,6 @@ def post_list(request):
 #             template_name="blog/category_list.html",
 #             context={"posts": posts}
 #         )
-#         data_dict = {"html_from_view": html}
 
 
 
