@@ -61,7 +61,6 @@ def post_list(request):
 #         html = render_to_string(
 #             template_name="blog/category_list.html",
 #             context={"posts": posts}
-#         )
 
 
 
