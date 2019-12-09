@@ -59,7 +59,6 @@ def post_list(request):
 #     title={"posts": posts}
 #     if request.is_ajax():
 #         html = render_to_string(
-#             template_name="blog/category_list.html",
 
 
 
