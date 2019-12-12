@@ -57,7 +57,6 @@ def post_list(request):
 #         posts = Post.objects.all().order_by('created_date')
 
 #     title={"posts": posts}
-#     if request.is_ajax():
 
 
 
