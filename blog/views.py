@@ -56,7 +56,7 @@ def post_list(request):
 #     else:
 #         posts = Post.objects.all().order_by('created_date')
 
-#     title={"posts": posts}
+
 
 
 
