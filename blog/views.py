@@ -52,7 +52,6 @@ def post_list(request):
 #     url_parameter = request.GET.get("id")
 
 #     if url_parameter:
-#         posts = Post.objects.filter(title__icontains = url_parameter).order_by('created_date')
 
 
 
