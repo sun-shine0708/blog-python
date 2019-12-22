@@ -51,7 +51,7 @@ def post_list(request):
 #     # pythonはviewsでcategoryのpkを取ってきているので、urlにpkの記載は必要ない
 #     url_parameter = request.GET.get("id")
 
-#     if url_parameter:
+
 
 
 
