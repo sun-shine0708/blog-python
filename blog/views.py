@@ -49,7 +49,6 @@ def post_list(request):
 
 #     title = {}
 #     # pythonはviewsでcategoryのpkを取ってきているので、urlにpkの記載は必要ない
-#     url_parameter = request.GET.get("id")
 
 
 
