@@ -1,1 +1,1 @@
-web: gunicorn --env DJANGO_SETTINGS_MODULE=mysite.settings mysite.wsgi --timeout 30 --log-file -
+web: gunicorn --env DJANGO_SETTINGS_MODULE=mysite.settings mysite.wsgi --timeout 40 --log-file -
