@@ -22,7 +22,7 @@ def awake():
     while True:
         try:
             print("Start Awaking")
-            requests.get("https://django-blogsite.herokuapp.com")
+            requests.get("")
             print("End")
         except:
             print("error")
