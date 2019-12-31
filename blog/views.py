@@ -48,7 +48,6 @@ def post_list(request):
 #     posts = Post.objects.all().order_by('created_date')
 
 #     title = {}
-#     # pythonはviewsでcategoryのpkを取ってきているので、urlにpkの記載は必要ない
 
 
 
