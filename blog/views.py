@@ -47,7 +47,7 @@ def post_list(request):
 # def post_list2(request):
 #     posts = Post.objects.all().order_by('created_date')
 
-#     title = {}
+
 
 
 
