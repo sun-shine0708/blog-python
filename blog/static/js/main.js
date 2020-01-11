@@ -26,7 +26,6 @@ title_input.on('keyup', function () {
 		id: id
 	}
 
-	// search_icon.addClass('blink')
 
 	if (scheduled_function) {
 		clearTimeout(scheduled_function)
