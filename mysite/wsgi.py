@@ -22,11 +22,11 @@ def awake():
     while True:
         try:
             print("Start Awaking")
-            requests.get("")
+            requests.get("https://django-blogsite.herokuapp.com")
             print("End")
         except:
             print("error")
-        time.sleep(300)
+        time.sleep(1800)
 
 t = threading.Thread(target=awake)
 t.start()
