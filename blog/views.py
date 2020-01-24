@@ -44,7 +44,6 @@ def post_list(request):
     return render(request, 'blog/post_list.html', context=ctx)
 
 
-
 def post_detail(request, pk):
     current_user = request.user.id
     post = get_object_or_404(Post, pk=pk)
