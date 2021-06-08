@@ -14,7 +14,7 @@ six==1.12.0
 sqlparse==0.3.0
 whitenoise==4.1.4
 django-cleanup==4.0.0
-Pillow==6.2.1
+Pillow==8.2.0
 requests==2.22.0
 cloudinary==1.18.2
 django-cloudinary-storage==0.2.3
